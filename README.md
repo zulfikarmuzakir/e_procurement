@@ -38,6 +38,10 @@ This project is an E-Procurement System designed to streamline the procurement p
    go run cmd/main.go
    ```
 
+## Default Admin Credentials
+- Email: admin@example.com
+- Password: password
+
 ## API Endpoints
 
 ### Public Endpoints

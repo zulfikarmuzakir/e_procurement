@@ -1,7 +1,7 @@
 DB_HOST: localhost
 DB_PORT: 5432
-DB_USER: postgres
-DB_PASSWORD: 
+DB_USER: root
+DB_PASSWORD: password
 DB_NAME: e_procurement
 JWT_SECRET: secret
 DB_SOURCE: postgresql://root:password@localhost:5433/e_procurement?sslmode=disable

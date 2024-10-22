@@ -16,7 +16,7 @@ WORKDIR /app
 
 COPY --from=builder /app/main .
 COPY --from=builder /app/migrate .
-COPY config.example.yaml ./config.yaml
+COPY config.yaml .
 COPY start.sh .
 COPY wait-for.sh .
 COPY db/migrations ./migrations

@@ -38,7 +38,7 @@ func (u *userUsecase) Register(user *domain.User) error {
 
 	if err := u.userRepo.Create(user); err != nil {
 		u.logger.Error("Failed to create user", zap.Error(err))
-		return errors.NewAppError(err, "Failed to create user", http.StatusInternalServerError)
+		return errors.NewAppError(err, err.Error(), http.StatusInternalServerError)
 	}
 
 	u.logger.Info("User registered successfully", zap.String("email", user.Email))

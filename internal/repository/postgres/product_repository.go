@@ -66,18 +66,22 @@ func (p *productRepository) GetProductsByVendorID(vendorID int64, limit int, off
 	})
 
 	if err != nil {
-		return nil, err
+		return []domain.Product{}, err
 	}
 
-	var domainProducts []domain.Product
-	for _, product := range products {
-		domainProducts = append(domainProducts, domain.Product{
+	if len(products) == 0 {
+		return []domain.Product{}, nil
+	}
+
+	domainProducts := make([]domain.Product, len(products))
+	for i, product := range products {
+		domainProducts[i] = domain.Product{
 			ID:       int64(product.ID),
 			VendorID: int64(product.VendorID),
 			Name:     product.Name,
 			Price:    product.Price,
 			Stock:    int(product.Stock),
-		})
+		}
 	}
 
 	return domainProducts, nil

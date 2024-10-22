@@ -18,38 +18,13 @@ This project is an E-Procurement System designed to streamline the procurement p
 - Docker and Docker Compose for containerization
 
 ## Getting Started
-
-### Using Docker
-
-1. Clone the repository:
-   ```
-   git clone git@github.com:zulfikarmuzakir/e_procurement.git
-   cd e_procurement
-   ```
-
-2. Copy the example configuration file:
-   ```
-   cp config.example.yaml config.yaml
-   ```
-
-3. Update the values in `config.yaml` according to your environment.
-
-4. Build and run the application using Docker Compose:
-   ```
-   docker-compose up --build
-   ```
-
-   This command will build the Docker images and start the containers for both the application and the PostgreSQL database.
-
-5. The application should now be running and accessible at `http://localhost:8080` (or the port specified in your configuration).
-
 ### Running without Docker
 
 1. Ensure you have Go and PostgreSQL installed on your system.
 
 2. Clone the repository and navigate to the project directory.
 
-3. Copy and update the `config.yaml` file as described above.
+3. Copy and update the `config.yaml`.
 
 4. Install dependencies:
    ```
